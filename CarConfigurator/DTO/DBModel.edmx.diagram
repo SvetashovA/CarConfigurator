@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5a5fc7a40c4a418f91449a2a8321da3c" Name="Diagram1">
+        <EntityTypeShape EntityType="CarConfiguratorModel.Car" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarConfiguratorModel.Conf_type" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarConfiguratorModel.Config" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarConfiguratorModel.Connections" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarConfiguratorModel.Option" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarConfiguratorModel.Option_type" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="CarConfiguratorModel.FK_Config_Car" ManuallyRouted="false" />
+        <AssociationConnector Association="CarConfiguratorModel.FK_Conf_type_Option" ManuallyRouted="false" />
+        <AssociationConnector Association="CarConfiguratorModel.FK_Config_Option" ManuallyRouted="false" />
+        <AssociationConnector Association="CarConfiguratorModel.FK_Connections_Option" ManuallyRouted="false" />
+        <AssociationConnector Association="CarConfiguratorModel.FK_Option_Option_type" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
