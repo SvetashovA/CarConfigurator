@@ -20,6 +20,7 @@ namespace CarConfigurator.DTO
             this.Conf_type = new HashSet<Conf_type>();
             this.Config = new HashSet<Config>();
             this.Connections = new HashSet<Connections>();
+            this.Connections1 = new HashSet<Connections>();
         }
     
         public int ID { get; set; }
@@ -33,6 +34,8 @@ namespace CarConfigurator.DTO
         public virtual ICollection<Config> Config { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Connections> Connections { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Connections> Connections1 { get; set; }
         public virtual Option_type Option_type { get; set; }
     }
 }

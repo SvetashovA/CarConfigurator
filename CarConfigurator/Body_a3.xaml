@@ -1,0 +1,24 @@
+﻿<Window x:Class="CarConfigurator.Body_a3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarConfigurator"
+        mc:Ignorable="d"
+        Title="Body_a3" Height="640" Width="1100">
+    <Grid>
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="Image/Audi.jpg" Stretch="UniformToFill" TileMode="None" />
+            </Grid.Background>
+            <Label x:Name="body_a3a4a6" Content="Тип кузова" Foreground="White" FontSize="30" HorizontalAlignment="Left" Margin="468,56,0,0" VerticalAlignment="Top" Height="66" Width="164"/>
+            <Button x:Name="sedan" Content="Sedan" FontSize="30" HorizontalAlignment="Left" Margin="116,381,0,0" VerticalAlignment="Top" Width="192" Height="42" Click="sedan_Click"/>
+            <Button x:Name="hatchback" Content="Hatchback" FontSize="30" HorizontalAlignment="Left" Margin="770,381,0,0" VerticalAlignment="Top" Width="192" Height="42"/>
+            <Image x:Name="sedan_im" HorizontalAlignment="Left" Height="120" Margin="116,451,0,0" VerticalAlignment="Top" Width="192" Source="Image/audi_a3sedan.jpg"/>
+            <Image x:Name="hatchback_im" HorizontalAlignment="Left" Height="120" Margin="770,451,0,0" VerticalAlignment="Top" Width="192" Source="Image/audi_a3.jpg"/>
+            <Button x:Name="cabrio" Content="Cabrio" FontSize="30" HorizontalAlignment="Left" Margin="440,381,0,0" VerticalAlignment="Top" Width="192" Height="42"/>
+            <Image x:Name="cabrio_im" HorizontalAlignment="Left" Height="120" Margin="440,451,0,0" VerticalAlignment="Top" Width="192" Source="Image/audi_a3cabrio.jpg"/>
+        </Grid>
+
+    </Grid>
+</Window>

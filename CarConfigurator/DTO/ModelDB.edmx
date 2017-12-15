@@ -36,7 +36,7 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Option_ID" Type="int" />
-          <Property Name="Option_block_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Option_block_ID" Type="int" />
         </EntityType>
         <EntityType Name="Option">
           <Key>
@@ -90,6 +90,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Connections_Connections">
+          <End Role="Connections" Type="Self.Connections" Multiplicity="1" />
+          <End Role="Connections1" Type="Self.Connections" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Connections">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Connections1">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Connections_Option">
           <End Role="Option" Type="Self.Option" Multiplicity="0..1" />
           <End Role="Connections" Type="Self.Connections" Multiplicity="*" />
@@ -99,6 +111,18 @@
             </Principal>
             <Dependent Role="Connections">
               <PropertyRef Name="Option_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Connections_Option1">
+          <End Role="Option" Type="Self.Option" Multiplicity="0..1" />
+          <End Role="Connections" Type="Self.Connections" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Option">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Connections">
+              <PropertyRef Name="Option_block_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -133,7 +157,15 @@
             <End Role="Option" EntitySet="Option" />
             <End Role="Config" EntitySet="Config" />
           </AssociationSet>
+          <AssociationSet Name="FK_Connections_Connections" Association="Self.FK_Connections_Connections">
+            <End Role="Connections" EntitySet="Connections" />
+            <End Role="Connections1" EntitySet="Connections" />
+          </AssociationSet>
           <AssociationSet Name="FK_Connections_Option" Association="Self.FK_Connections_Option">
+            <End Role="Option" EntitySet="Option" />
+            <End Role="Connections" EntitySet="Connections" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Connections_Option1" Association="Self.FK_Connections_Option1">
             <End Role="Option" EntitySet="Option" />
             <End Role="Connections" EntitySet="Connections" />
           </AssociationSet>
@@ -182,8 +214,11 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Option_ID" Type="Int32" />
-          <Property Name="Option_block_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Option_block_ID" Type="Int32" />
+          <NavigationProperty Name="Connections1" Relationship="Self.FK_Connections_Connections" FromRole="Connections" ToRole="Connections1" />
+          <NavigationProperty Name="Connections2" Relationship="Self.FK_Connections_Connections" FromRole="Connections1" ToRole="Connections" />
           <NavigationProperty Name="Option" Relationship="Self.FK_Connections_Option" FromRole="Connections" ToRole="Option" />
+          <NavigationProperty Name="Option1" Relationship="Self.FK_Connections_Option1" FromRole="Connections" ToRole="Option" />
         </EntityType>
         <EntityType Name="Option">
           <Key>
@@ -196,6 +231,7 @@
           <NavigationProperty Name="Conf_type" Relationship="Self.FK_Conf_type_Option" FromRole="Option" ToRole="Conf_type" />
           <NavigationProperty Name="Config" Relationship="Self.FK_Config_Option" FromRole="Option" ToRole="Config" />
           <NavigationProperty Name="Connections" Relationship="Self.FK_Connections_Option" FromRole="Option" ToRole="Connections" />
+          <NavigationProperty Name="Connections1" Relationship="Self.FK_Connections_Option1" FromRole="Option" ToRole="Connections" />
           <NavigationProperty Name="Option_type" Relationship="Self.FK_Option_Option_type" FromRole="Option" ToRole="Option_type" />
         </EntityType>
         <EntityType Name="Option_type">
@@ -242,6 +278,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Connections_Connections">
+          <End Role="Connections" Type="Self.Connections" Multiplicity="1" />
+          <End Role="Connections1" Type="Self.Connections" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Connections">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Connections1">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Connections_Option">
           <End Role="Option" Type="Self.Option" Multiplicity="0..1" />
           <End Role="Connections" Type="Self.Connections" Multiplicity="*" />
@@ -251,6 +299,18 @@
             </Principal>
             <Dependent Role="Connections">
               <PropertyRef Name="Option_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Connections_Option1">
+          <End Role="Option" Type="Self.Option" Multiplicity="0..1" />
+          <End Role="Connections" Type="Self.Connections" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Option">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Connections">
+              <PropertyRef Name="Option_block_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -285,7 +345,15 @@
             <End Role="Option" EntitySet="Option" />
             <End Role="Config" EntitySet="Config" />
           </AssociationSet>
+          <AssociationSet Name="FK_Connections_Connections" Association="Self.FK_Connections_Connections">
+            <End Role="Connections" EntitySet="Connections" />
+            <End Role="Connections1" EntitySet="Connections" />
+          </AssociationSet>
           <AssociationSet Name="FK_Connections_Option" Association="Self.FK_Connections_Option">
+            <End Role="Option" EntitySet="Option" />
+            <End Role="Connections" EntitySet="Connections" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Connections_Option1" Association="Self.FK_Connections_Option1">
             <End Role="Option" EntitySet="Option" />
             <End Role="Connections" EntitySet="Connections" />
           </AssociationSet>
@@ -333,7 +401,7 @@
               <MappingFragment StoreEntitySet="Connections">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Option_ID" ColumnName="Option_ID" />
-                <ScalarProperty Name="Option_block_name" ColumnName="Option_block_name" />
+                <ScalarProperty Name="Option_block_ID" ColumnName="Option_block_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

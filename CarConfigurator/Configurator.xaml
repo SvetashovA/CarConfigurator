@@ -1,0 +1,115 @@
+﻿<Window x:Class="CarConfigurator.Configurator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarConfigurator"
+        mc:Ignorable="d"
+        Title="Configurator" Height="640" Width="1100">
+    <Grid Name="main">
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Антон\source\repos\CarConfigurator\CarConfigurator\Image\Audi.jpg" Stretch="UniformToFill" TileMode="None" />
+        </Grid.Background>
+        <ComboBox Name="Engine" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="45,160,0,0" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock>1.4_tdi</TextBlock>
+            <TextBlock>1.4_tfsi</TextBlock>
+            <TextBlock>2.0_tdi</TextBlock>
+            <TextBlock>2.0_tfsi</TextBlock>
+            <TextBlock>3.2_tdi</TextBlock>
+            <TextBlock>3.2_tfsi</TextBlock>
+            <TextBlock>4.2_tfsi</TextBlock>
+            <TextBlock>5.0_tfsi</TextBlock>
+            <TextBlock>6.0_tdi</TextBlock>
+
+        </ComboBox>
+        <TextBlock  Name="BalanceTextBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="356,58,0,0"/>
+        <Label Content="Конфигуратор" FontSize="20" Foreground="White" HorizontalAlignment="Left" Margin="474,10,0,0" VerticalAlignment="Top" Height="37" Width="148"/>
+        <ComboBox x:Name="Packages" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="45,100,0,0" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock>Sport</TextBlock>
+            <TextBlock>Comfort</TextBlock>
+            <TextBlock>Your_Configuration</TextBlock>
+        </ComboBox>
+        <ComboBox x:Name="Colour" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="45,220,0,0" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock>Белый</TextBlock>
+            <TextBlock>Черный</TextBlock>
+            <TextBlock>Белый металлик</TextBlock>
+            <TextBlock>Синий металлик</TextBlock>
+            <TextBlock>Серебристый металлик</TextBlock>
+            <TextBlock>Красный металлик</TextBlock>
+            <TextBlock>Зеленый металлик</TextBlock>
+            <TextBlock>Эксклюзив</TextBlock>
+        </ComboBox>
+        <ComboBox x:Name="Wheels" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="45,280,0,0" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock>17' 5 Рукавов Star</TextBlock>
+            <TextBlock>17' 10 параллельных спиц</TextBlock>
+            <TextBlock>18' 5 сегментных спиц</TextBlock>
+            <TextBlock>18' 5 двойных спиц Star</TextBlock>
+            <TextBlock>19' 5 параллельных спиц</TextBlock>
+            <TextBlock>19' 5 рукавов Turbine</TextBlock>
+
+        </ComboBox>
+        <ComboBox x:Name="Light" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="45,340,0,0" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock>Стандартные фары</TextBlock>
+            <TextBlock>Светодиодные с задними динамическими указателями поворота</TextBlock>
+            <TextBlock>Светодиодные с задними и передними динамическими указателями поворота</TextBlock>
+        </ComboBox>
+        <ComboBox x:Name="View" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="45,400,0,0" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock>Внешние зеркала черного глянцевого цвета</TextBlock>
+            <TextBlock>Черный стайлинг пакет</TextBlock>
+        </ComboBox>
+        <ComboBox x:Name="Seats" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="45,460,0,0" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock>NСтандартные сиденья</TextBlock>
+            <TextBlock>Спортивные сиденья</TextBlock>
+            <TextBlock>Спортивные сиденья Sline</TextBlock>
+        </ComboBox>
+        <ComboBox x:Name="Material" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="927,100,0,0" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock>Кожа</TextBlock>
+            <TextBlock>Кожа + Алькантара</TextBlock>
+            <TextBlock>Эксклюзивная кожа</TextBlock>
+        </ComboBox>
+        <ComboBox x:Name="Rubber" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="927,160,0,0" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock>3 спицы</TextBlock>
+            <TextBlock>3 спицы с расширенным набором функций</TextBlock>
+            <TextBlock>3 спицы со скошенным нижним сегментом></TextBlock>
+        </ComboBox>
+        <ComboBox x:Name="MMI" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="927,220,0,0" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock>MMI navigation</TextBlock>
+            <TextBlock>MMI navigation plus MMI touch</TextBlock>
+        </ComboBox>
+        <ComboBox x:Name="interface" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="927,280,0,0" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock>Audi music interface</TextBlock>
+            <TextBlock>Audi smartphone interface</TextBlock>
+            <TextBlock><Run Text="Эксклюзивная кожа"/></TextBlock>
+        </ComboBox>
+        <ComboBox x:Name="Audio_sustem" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="927,340,0,0" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock>Sound system</TextBlock>
+            <TextBlock>Bang and Olufsen system</TextBlock>
+        </ComboBox>
+        <ComboBox x:Name="Tech" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="927,400,0,0" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock>адаптивная подвеска</TextBlock>
+            <TextBlock>динамическое управление</TextBlock>
+            <TextBlock>адаптивная подвеска + динамическое управление</TextBlock>
+        </ComboBox>
+        <ComboBox x:Name="Drive_type" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="927,460,0,0" SelectionChanged="ComboBox_SelectionChanged">
+            <TextBlock>Задний привод</TextBlock>
+            <TextBlock>quattro</TextBlock>
+        </ComboBox>
+        <TextBox x:Name="Price" HorizontalAlignment="Left" Height="23" Margin="927,544,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Price_L" Content="Цена" Foreground="White" FontSize="13" HorizontalAlignment="Left" Margin="927,513,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Packages_L" Content="Пакеты" Foreground="White" FontSize="13" HorizontalAlignment="Left" Margin="45,68,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Engine_L" Content="Двигатель" Foreground="White" FontSize="13" HorizontalAlignment="Left" Margin="45,128,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Colour_L" Content="Цвет" Foreground="White" FontSize="13" HorizontalAlignment="Left" Margin="45,188,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Wheels_L" Content="Диски" Foreground="White" FontSize="13" HorizontalAlignment="Left" Margin="45,248,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Light_L" Content="Фары" Foreground="White" FontSize="13" HorizontalAlignment="Left" Margin="45,308,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="View_L" Content="Внешние детали" Foreground="White" FontSize="13" HorizontalAlignment="Left" Margin="45,368,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Seats_L" Content="Сиденья" Foreground="White" FontSize="13" HorizontalAlignment="Left" Margin="45,428,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Material_L" Content="Матерьял" Foreground="White" FontSize="13" HorizontalAlignment="Left" Margin="927,68,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Rubber_L" Content="Руль" Foreground="White" FontSize="13" HorizontalAlignment="Left" Margin="927,128,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="MMI_L" Content="Навигация" Foreground="White" FontSize="13" HorizontalAlignment="Left" Margin="927,188,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="interface_L" Content="Интерфейс" Foreground="White" FontSize="13" HorizontalAlignment="Left" Margin="927,248,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Audio_system_L" Content="Аудио система" Foreground="White" FontSize="13" HorizontalAlignment="Left" Margin="927,308,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Tech_L" Content="Доп опции" Foreground="White" FontSize="13" HorizontalAlignment="Left" Margin="927,368,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Drive_type_L" Content="Привод" Foreground="White" FontSize="13" HorizontalAlignment="Left" Margin="927,428,0,0" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

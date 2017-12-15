@@ -1,0 +1,24 @@
+﻿<Window x:Class="CarConfigurator.Body_a5"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarConfigurator"
+        mc:Ignorable="d"
+        Title="Body_a5" Height="640" Width="1100" 
+        ResizeMode="NoResize">
+ 
+    <Grid>
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="Image/Audi.jpg" Stretch="UniformToFill" TileMode="None" />
+            </Grid.Background>
+            <Label x:Name="body_a3a4a6" Content="Тип кузова" Foreground="White" FontSize="30" HorizontalAlignment="Left" Margin="468,56,0,0" VerticalAlignment="Top" Height="66" Width="164"/>
+            <Button x:Name="sedan_a5" Content="Sedan" FontSize="30" HorizontalAlignment="Left" Margin="116,381,0,0" VerticalAlignment="Top" Width="192" Height="42"/>
+            <Button x:Name="coupe_a5" Content="Coupe" FontSize="30" HorizontalAlignment="Left" Margin="770,381,0,0" VerticalAlignment="Top" Width="192" Height="42"/>
+            <Image x:Name="sedan_im" HorizontalAlignment="Left" Height="120" Margin="116,451,0,0" VerticalAlignment="Top" Width="192" Source="Image/audi_a5.jpg"/>
+            <Image x:Name="coupe_im" HorizontalAlignment="Left" Height="120" Margin="770,451,0,0" VerticalAlignment="Top" Width="192" Source="Image/audi_a5_coupe.jpg"/>
+        </Grid>
+
+    </Grid>
+</Window>

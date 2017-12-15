@@ -1,0 +1,40 @@
+﻿<Window x:Class="CarConfigurator.Model"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarConfigurator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="640" Width="1100">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Антон\source\repos\CarConfigurator\CarConfigurator\Image\Audi.jpg" Stretch="UniformToFill" TileMode="None" />
+        </Grid.Background>
+        <Label x:Name="label" Content="Выберите свою модель" Foreground="White" FontSize="20" HorizontalAlignment="Left" Margin="430,10,0,0" VerticalAlignment="Top" Width="228" Height="39"/>
+        <Button x:Name="A1" Content="A1" HorizontalAlignment="Left" FontSize="25" Margin="118,61,0,0" VerticalAlignment="Top" Width="192" Height="32" Click="A1_Click"/>
+        <Button x:Name="A3" Content="A3" HorizontalAlignment="Left" FontSize="25" Margin="338,61,0,0" VerticalAlignment="Top" Width="192" Height="32" Click="A3_Click"/>
+        <Image x:Name="imageA1" HorizontalAlignment="Left" Height="120" Margin="118,98,0,0" VerticalAlignment="Top" Width="192" Source="Image/aidi_a1.jpg"/>
+        <Button x:Name="A4" Content="A4" HorizontalAlignment="Left" FontSize="25" Margin="558,61,0,0" VerticalAlignment="Top" Width="192" Height="32" RenderTransformOrigin="0.5,0.5"/>
+        <Image x:Name="imageA3" HorizontalAlignment="Left" Height="120" Margin="338,98,0,0" VerticalAlignment="Top" Width="192" Source="Image/audi_a3.jpg"/>
+        <Image x:Name="imageA4" HorizontalAlignment="Left" Height="120" Margin="558,98,0,0" VerticalAlignment="Top" Width="192" Source="Image/audi_a4.jpg"/>
+        <Button x:Name="A5" Content="A5" HorizontalAlignment="Left" FontSize="25" Margin="778,61,0,0" VerticalAlignment="Top" Width="192" Height="32" RenderTransformOrigin="0.5,0.5"/>
+        <Image x:Name="imageA5" HorizontalAlignment="Left" Height="120" Margin="778,98,0,0" VerticalAlignment="Top" Width="192" Source="Image/audi_a5.jpg"/>
+        <Button x:Name="A6" Content="A6" HorizontalAlignment="Left" FontSize="25" Margin="118,251,0,0" VerticalAlignment="Top" Width="192" Height="32"/>
+        <Image x:Name="imageA6" HorizontalAlignment="Left" Height="120" Margin="118,288,0,0" VerticalAlignment="Top" Width="192" Source="Image/audi_a6.jpg"/>
+        <Button x:Name="A7" Content="A7" HorizontalAlignment="Left" FontSize="25" Margin="338,251,0,0" VerticalAlignment="Top" Width="192" Height="32"/>
+        <Image x:Name="imageA7" HorizontalAlignment="Left" Height="120" Margin="338,288,0,0" VerticalAlignment="Top" Width="192" Source="Image/audi_a7.jpg"/>
+        <Button x:Name="A8" Content="A8" HorizontalAlignment="Left" FontSize="25" Margin="558,251,0,0" VerticalAlignment="Top" Width="192" Height="32"/>
+        <Image x:Name="imageA8" HorizontalAlignment="Left" Height="120" Margin="558,288,0,0" VerticalAlignment="Top" Width="192" Source="Image/audi_a8.jpg"/>
+        <Button x:Name="Q3" Content="Q3" HorizontalAlignment="Left" FontSize="25" Margin="778,251,0,0" VerticalAlignment="Top" Width="192" Height="32"/>
+        <Image x:Name="imageQ3" HorizontalAlignment="Left" Height="120" Margin="778,288,0,0" VerticalAlignment="Top" Width="192" Source="Image/audi_q3.jpg"/>
+        <Button x:Name="Q5" Content="Q5" HorizontalAlignment="Left" FontSize="25" Margin="118,442,0,0" VerticalAlignment="Top" Width="192" Height="32"/>
+        <Image x:Name="imageQ5" HorizontalAlignment="Left" Height="120" Margin="118,479,0,0" VerticalAlignment="Top" Width="192" Source="Image/audi_q5.jpg"/>
+        <Button x:Name="Q7" Content="Q7" HorizontalAlignment="Left" FontSize="25" Margin="338,442,0,0" VerticalAlignment="Top" Width="192" Height="32"/>
+        <Image x:Name="imageQ7" HorizontalAlignment="Left" Height="120" Margin="338,479,0,0" VerticalAlignment="Top" Width="192" Source="Image/audi_q7.jpg"/>
+        <Button x:Name="TT" Content="TT" HorizontalAlignment="Left" FontSize="25" Margin="558,442,0,0" VerticalAlignment="Top" Width="192" Height="32"/>
+        <Image x:Name="imageTT" HorizontalAlignment="Left" Height="120" Margin="558,479,0,0" VerticalAlignment="Top" Width="192" Source="Image/audi_tt.jpg"/>
+        <Button x:Name="R8" Content="R8" HorizontalAlignment="Left" FontSize="25" Margin="778,442,0,0" VerticalAlignment="Top" Width="192" Height="32"/>
+        <Image x:Name="imageR8" HorizontalAlignment="Left" Height="120" Margin="778,479,0,0" VerticalAlignment="Top" Width="192" Source="Image/audi_r8.jpg"/>
+
+    </Grid>
+</Window>

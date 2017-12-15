@@ -10,22 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace CarConfigurator
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Body_a3.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    /// 
+    
+    public partial class Body_a3 : Window
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-            
-        }
-
-     
+      
     }
 }

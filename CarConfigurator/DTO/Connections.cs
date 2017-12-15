@@ -16,8 +16,11 @@ namespace CarConfigurator.DTO
     {
         public int ID { get; set; }
         public Nullable<int> Option_ID { get; set; }
-        public string Option_block_name { get; set; }
+        public Nullable<int> Option_block_ID { get; set; }
     
+        public virtual Connections Connections1 { get; set; }
+        public virtual Connections Connections2 { get; set; }
         public virtual Option Option { get; set; }
+        public virtual Option Option1 { get; set; }
     }
 }

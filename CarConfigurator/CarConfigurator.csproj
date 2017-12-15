@@ -63,6 +63,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Body_a3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Body_a4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Body_a5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Configurator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,45 +87,65 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Body_a3.xaml.cs">
+      <DependentUpon>Body_a3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Body_a4.xaml.cs">
+      <DependentUpon>Body_a4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Body_a5.xaml.cs">
+      <DependentUpon>Body_a5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Configurator.xaml.cs">
+      <DependentUpon>Configurator.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DTO\Car.cs">
-      <DependentUpon>DBModel.tt</DependentUpon>
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\Config.cs">
-      <DependentUpon>DBModel.tt</DependentUpon>
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\Conf_type.cs">
-      <DependentUpon>DBModel.tt</DependentUpon>
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\Connections.cs">
-      <DependentUpon>DBModel.tt</DependentUpon>
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\DBModel.Context.cs">
+    <Compile Include="DTO\ModelDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBModel.Context.tt</DependentUpon>
+      <DependentUpon>ModelDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\DBModel.cs">
+    <Compile Include="DTO\ModelDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBModel.tt</DependentUpon>
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="DTO\DBModel.Designer.cs">
+    <Compile Include="DTO\ModelDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBModel.edmx</DependentUpon>
+      <DependentUpon>ModelDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="DTO\Option.cs">
-      <DependentUpon>DBModel.tt</DependentUpon>
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
     <Compile Include="DTO\Option_type.cs">
-      <DependentUpon>DBModel.tt</DependentUpon>
+      <DependentUpon>ModelDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Logic.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Model.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model.xaml.cs">
+      <DependentUpon>Model.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -127,12 +163,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="DTO\DBModel.edmx">
+    <EntityDeploy Include="DTO\ModelDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DTO\DBModel.edmx.diagram">
-      <DependentUpon>DBModel.edmx</DependentUpon>
+    <None Include="DTO\ModelDB.edmx.diagram">
+      <DependentUpon>ModelDB.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -144,19 +180,38 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DTO\DBModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBModel.edmx</DependentUpon>
-      <LastGenOutput>DBModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DTO\DBModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBModel.edmx</DependentUpon>
-      <LastGenOutput>DBModel.cs</LastGenOutput>
-    </Content>
+    <Resource Include="Image\audi_a5_coupe.jpg" />
+    <Resource Include="Image\audi_a4_avant.jpg" />
+    <Resource Include="Image\audi_a3sedan.jpg" />
+    <Resource Include="Image\audi_a3cabrio.jpg" />
+    <Resource Include="Image\audi_a3.jpg" />
+    <Resource Include="Image\aidi_a1.jpg" />
+    <Resource Include="Image\audi_a4.jpg" />
+    <Resource Include="Image\audi_a5.jpg" />
+    <Resource Include="Image\audi_a6.jpg" />
+    <Resource Include="Image\audi_a7.jpg" />
+    <Resource Include="Image\audi_a8.jpg" />
+    <Resource Include="Image\audi_q3.jpg" />
+    <Resource Include="Image\audi_q5.jpg" />
+    <Resource Include="Image\audi_q7.jpg" />
+    <Resource Include="Image\audi_r8.jpg" />
+    <Resource Include="Image\audi_tt.jpg" />
+    <Resource Include="Image\Audi.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DTO\ModelDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDB.edmx</DependentUpon>
+      <LastGenOutput>ModelDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DTO\ModelDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelDB.edmx</DependentUpon>
+      <LastGenOutput>ModelDB.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
